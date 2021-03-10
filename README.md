@@ -12,10 +12,8 @@ sudo docker-compose up
 ```
 
 ### Tests
-
+Use this command after first two in block Start
 ```
-sudo docker-compose build
-sudo docker-compose run web python manage.py migrate
 sudo docker-compose run web python manage.py test
 ```
 The program was formatted with black.
