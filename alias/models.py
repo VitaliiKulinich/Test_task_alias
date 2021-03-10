@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 
 
 class Alias(models.Model):
-	"""The class used to describe model Alias."""
+	"""The class is used to describe model Alias."""
 
 	alias = models.CharField(max_length=24)
 	target = models.CharField(max_length=24)
@@ -14,7 +14,7 @@ class Alias(models.Model):
 		return self.alias, self.target, self.start, self.end
 
 def create_an_alias(alias, target, start, end=None):
-	"""The function used to create new alias."""
+	"""The function is used to create new alias."""
 
 	if not Alias.objects.filter(target=target):            # We don't have this target in our db. 
 														   # But we need to check we had this alias before. 
@@ -75,7 +75,7 @@ def create_an_alias(alias, target, start, end=None):
 
 
 def get_aliases(target, start, end): 
-	"""The function used to get Aliases."""
+	"""The function is used to get Aliases."""
 
 	aliases = Alias.objects.filter(target=target)
 	result = {}
@@ -84,6 +84,7 @@ def get_aliases(target, start, end):
 		print("Alias was not found")
 		return {}
 	
+	# This 'if-else' block is used to separate checking on special and general case.  
 	if end == None:
 		for al in aliases:
 			if al.end == None:
