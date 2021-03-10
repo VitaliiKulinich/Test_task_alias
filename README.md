@@ -6,7 +6,7 @@
 ### Start
 
 ```
-sudo docker-compose build .
+sudo docker-compose build
 sudo docker-compose run web python manage.py migrate
 sudo docker-compose up
 ```
@@ -14,7 +14,7 @@ sudo docker-compose up
 ### Tests
 
 ```
-sudo docker-compose build .
+sudo docker-compose build
 sudo docker-compose run web python manage.py migrate
 sudo docker-compose run web python manage.py test
 ```
