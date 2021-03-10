@@ -12,9 +12,9 @@ sudo docker-compose up
 ```
 
 ### Tests
-Use this command after first two in block Start
+This command can be used after execution of first two commands in block Start.
 ```
 sudo docker-compose run web python manage.py test
 ```
-The program was formatted with black.
+The program was formatted by Black.
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
